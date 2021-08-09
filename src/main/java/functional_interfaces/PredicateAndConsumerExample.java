@@ -23,9 +23,12 @@ public class PredicateAndConsumerExample {
     };
 
     static Consumer<Student> studentConsumer = (student) -> {
-//        if (gradleLevelFilter.and(gpaFilter).test(student)){
-//            biConsumer.accept(student.getName(), student.getActivities());
-//        }
+        if (gradleLevelFilter.and(gpaFilter).test(student)){
+            biConsumer.accept(student.getName(), student.getActivities());
+        }
+    };
+
+    static Consumer<Student> studentConsumer2 = (student) -> {
         if (biPredicate.test(student.getGradeLevel(), student.getGpa())){
             biConsumer.accept(student.getName(), student.getActivities());
         }
@@ -34,6 +37,7 @@ public class PredicateAndConsumerExample {
     public static void printNameActivities() {
         System.out.println("printNameActivities");
         studentList.forEach(studentConsumer);
+        studentList.forEach(studentConsumer2);
 
     }
 
