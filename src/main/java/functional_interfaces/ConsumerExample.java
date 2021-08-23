@@ -22,7 +22,6 @@ public class ConsumerExample {
         System.out.println("printNameActivities");
         // consumer chaining
         studentList.forEach(c3.andThen(c4));
-
     }
 
     public static void printNameActivitiesUsingCondition() {
