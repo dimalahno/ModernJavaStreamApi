@@ -15,6 +15,12 @@ public class  NumericStreamMapExample {
 
     public static void main(String[] args) {
         mapToObject().forEach(System.out::println);
+
+        long sum = IntStream.rangeClosed(1, 5)
+                .mapToLong(i -> i)
+                .sum();
+
+        System.out.println(sum);
     }
 
 }
