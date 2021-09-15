@@ -55,10 +55,10 @@ public class StreamsGroupingByExample {
     }
 
     public static void main(String[] args) {
-//        groupStudentsByGender();
-//        customizeGroupStudentsByGender();
-//        twoLevelGrouping();
-//        twoLevelGrouping_2();
+        groupStudentsByGender();
+        customizeGroupStudentsByGender();
+        twoLevelGrouping();
+        twoLevelGrouping_2();
         twoLevelGrouping_3();
     }
 }
