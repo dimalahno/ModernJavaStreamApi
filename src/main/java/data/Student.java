@@ -1,6 +1,7 @@
 package data;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
     private String name;
@@ -9,6 +10,15 @@ public class Student {
     private String gender;
     List<String> activities;
     private int notebooks;
+    private Optional<Bike> bike = Optional.empty();
+
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(final Optional<Bike> bike) {
+        this.bike = bike;
+    }
 
     public Student(final String name, final int gradeLevel, final double gpa, final String gender,
                    final List<String> activities, final int notebooks) {
@@ -94,8 +104,8 @@ public class Student {
                 ", gpa=" + gpa +
                 ", gender='" + gender + '\'' +
                 ", activities=" + activities +
+                ", notebooks=" + notebooks +
+                ", bike=" + bike +
                 '}';
     }
-
-
 }
