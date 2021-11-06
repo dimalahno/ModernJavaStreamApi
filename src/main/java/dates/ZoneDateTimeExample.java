@@ -26,5 +26,18 @@ public class ZoneDateTimeExample {
         LocalDateTime localDateTime1 = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
         System.out.println(localDateTime1);
 
+        // Convert from localDateTime, instant to ZoneLocalDate and time
+
+        LocalDateTime localDateTime2 = LocalDateTime.now();
+        System.out.println(localDateTime2);
+        ZonedDateTime zonedDateTime1 = localDateTime2.atZone(ZoneId.of("Asia/Almaty"));
+        System.out.println(zonedDateTime1);
+
+        ZonedDateTime zonedDateTime2 = Instant.now().atZone(ZoneId.of("Asia/Almaty"));
+        System.out.println(zonedDateTime2);
+
+        OffsetDateTime offsetDateTime = localDateTime2.atOffset(ZoneOffset.ofHours(+6));
+        System.out.println(offsetDateTime);
+
     }
 }
